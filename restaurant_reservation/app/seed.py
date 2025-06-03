@@ -8,7 +8,7 @@ from app.database import engine, SessionLocal
 Base.metadata.create_all(engine)
 session = SessionLocal()
 
-# Add sample tables
+
 tables = [Table(table_number=i, capacity=4) for i in range(1, 6)]
 session.add_all(tables)
 session.commit()
